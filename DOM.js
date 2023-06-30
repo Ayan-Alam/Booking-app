@@ -35,11 +35,12 @@ document.addEventListener('DOMContentLoaded',function(){
            document.getElementById('name').value = my_obj.name;
            document.getElementById('email').value = my_obj.email;
            document.getElementById('phone').value = my_obj.phone;
-         }   
+         }
+         axios.get("https://crudcrud.com/api/f57972e886e0450ba9ece7897886f8ab/Appointmentdata",my_obj)
+         .then((res)=>{console.log(res.data);})
+         .catch((err)=>{console.log(err);})  
          axios.post("https://crudcrud.com/api/f57972e886e0450ba9ece7897886f8ab/Appointmentdata",my_obj)
-        .then((res)=>{
-          console.log(res.data);
-        })
+        .then((res)=>{console.log(res.data);})
         .catch((err)=>{console.log(err);}) 
             }  
 });
