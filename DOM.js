@@ -31,13 +31,20 @@ document.addEventListener('DOMContentLoaded',function(){
         }
         edit.onclick = () =>{
            localStorage.removeItem(my_obj.email);
+           itemList.removeChild(li);
            document.getElementById('name').value = my_obj.name;
            document.getElementById('email').value = my_obj.email;
            document.getElementById('phone').value = my_obj.phone;
-           itemList.removeChild(li);
-         }    
-        let my_obj_string = JSON.stringify(my_obj);
-        localStorage.setItem(email,my_obj_string);
-     }
-     
+         }   
+         axios.post("https://crudcrud.com/api/f57972e886e0450ba9ece7897886f8ab/Appointmentdata",my_obj)
+        .then((res)=>{
+          console.log(res.data);
+        })
+        .catch((err)=>{console.log(err);}) 
+            }  
 });
+
+/*
+let my_obj_string = JSON.stringify(my_obj);
+localStorage.setItem(email,my_obj_string); 
+*/
