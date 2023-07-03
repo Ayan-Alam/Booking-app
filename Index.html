@@ -2,14 +2,33 @@
 <html>
   <head>
     <title>Booking app</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./DOM.js"></script>
-  <form id="addform">
-    <label>Name:<input type="text" id="name"></label>
-    <label>E-mail:<input type="text" id="email"></label>
-    <label>Phone-no:<input type="text" id="phone"></label>
-    <button type="submit">Submit</button>
+  <body>
+    <!-- Your existing code here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./DOM.js"></script>
+    <form id="addform" class="p-4">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="text" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone-no:</label>
+        <input type="text" class="form-control" id="phone">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <ul id="list-items"></ul>
-  </html>
+
+    <!-- Add Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
